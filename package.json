@@ -1,0 +1,15 @@
+{
+  "name": "showdate",
+  "version": "1.0.0",
+  "description": "Webpage that shows user's date",
+  "license": "ISC",
+  "author": "Gorgisius",
+  "type": "commonjs",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.18"
+  }
+}
