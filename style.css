@@ -1,19 +1,27 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import "tailwindcss";
+
+.modal {
+  display: none;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #07050a;
-    font-family: Arial, sans-serif;
-    color: rgb(255, 255, 255);
+.modal.is-open {
+  display: block;
 }
 
-h1{
-    font-size: 6rem;
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__container {
+  background: #fff;
+  padding: 2rem;
+  max-width: 500px;
+  border-radius: 4px;
 }
