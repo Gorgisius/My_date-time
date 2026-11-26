@@ -9,29 +9,18 @@
 <script type="module" src="./index.js"></script>
 <body class="text-white bg-gray-950 relative h-screen">
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-mono">
-        <div class="flex">
-            <p id="location" class="text-[20px]">Loading...</p>
-            <button id="change_tz" class="w-5 ml-1 cursor-pointer" data-micromodal-trigger="modal-1">▼</button>
-            <!-- Modal Container -->
-            <div class="modal" id="modal-1" aria-hidden="true">
-            <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-                <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-                
-                <header class="modal__header">
-                    <h2 id="modal-1-title" class="">Modal Title</h2>
-                    <button aria-label="Close modal" data-micromodal-close>✕</button>
-                </header>
-                
-                <main class="modal__content">
-                    <p>Your modal content goes here.</p>
-                </main>
-                
-                <footer class="modal__footer">
-                    <button data-micromodal-close>Close</button>
-                </footer>
-
-                </div>
-            </div>
+        <!-- Dropdown -->
+        <div class="dropdown relative">
+            <button id="change_tz" class="flex cursor-pointer items-center">
+                <p id="location" class="text-[20px]">Loading...</p>
+                <p class="w-5 ml-1">▼</p>
+            </button>
+            <div id="ddcontent" class="content hidden absolute bg-gray-800 p-5 rounded-md">
+                <button class="block cursor-pointer p-1 hover:font-semibold action">America/Mazatlan</button>
+                <button class="block cursor-pointer p-1 hover:font-semibold action">America/New_York</button>
+                <button class="block cursor-pointer p-1 hover:font-semibold action">Europe/London</button>
+                <button class="block cursor-pointer p-1 hover:font-semibold action">Europe/Paris</button>
+                <button class="block cursor-pointer p-1 hover:font-semibold action">Australia/Sydney</button>
             </div>
         </div>
         <h1 id="time" class="text-right text-[7rem]">00:00:00</h1>
